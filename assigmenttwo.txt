@@ -1,0 +1,31 @@
+Fråga 2
+Du är ansvarig för de anställdas lön och deras kostnad för lunch
+på företaget. Du skall skriva program som håller reda på hur
+mycket de tjänar och hur mycket lunchen kostar för varje
+enskild person. Du ska använda dig av metoder i alla delfrågor.
+Arv och GUI skall användas. Förklara ditt val.
+Varje person i har en lön. De har 6 miljoner tillsammans i lön på
+ett år. Anna, Björn, Cecilia, David, Erik tjänar lika mycket,
+55 000 kr i månaden. Filip, Greta tjänar 40 000 kr i månaden.
+Hans, Ingrid och Johannes delar lika på resten.
+Del 2:1
+• Skriv ett program som räknar ut hur mycket Hans, Ingrid
+och Johannes tjänar i månaden.
+• Programmet skall fråga efter siffrorna ovan och de skall inte
+vara kodade i programmet
+• Du ska använda dig av inmatningsfält.
+Det är inte godkänt att räkna ut i huvudet.
+Del 2:2
+• Varje år får alla en procentuell ökning på 5%. Skriv ett
+program som räknar ut vad de kommer att tjäna under
+2024. Används dig av inmatningsfält eller hitta en annan
+lösning som du kan använda dig av.
+Del 2:3
+• Varje dag finns det möjlighet att äta lunch på företaget. Skriv
+ett program som räknar ut vad de kostar för de anställda att
+äta lunch. En vanlig lunch kostar 75 kr och en lyxlunch
+kostar 125 kr.
+• Skriv ett program som låter de anställda skriva in om de har
+ätit och vilken av luncherna de åt.
+• Räkna ut för varje vecka, månad och år för varje enskild
+anställd köper lunch för.
