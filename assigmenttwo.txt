@@ -4,10 +4,12 @@ på företaget. Du skall skriva program som håller reda på hur
 mycket de tjänar och hur mycket lunchen kostar för varje
 enskild person. Du ska använda dig av metoder i alla delfrågor.
 Arv och GUI skall användas. Förklara ditt val.
+
 Varje person i har en lön. De har 6 miljoner tillsammans i lön på
 ett år. Anna, Björn, Cecilia, David, Erik tjänar lika mycket,
 55 000 kr i månaden. Filip, Greta tjänar 40 000 kr i månaden.
 Hans, Ingrid och Johannes delar lika på resten.
+
 Del 2:1
 • Skriv ett program som räknar ut hur mycket Hans, Ingrid
 och Johannes tjänar i månaden.
@@ -15,11 +17,13 @@ och Johannes tjänar i månaden.
 vara kodade i programmet
 • Du ska använda dig av inmatningsfält.
 Det är inte godkänt att räkna ut i huvudet.
+
 Del 2:2
 • Varje år får alla en procentuell ökning på 5%. Skriv ett
 program som räknar ut vad de kommer att tjäna under
 2024. Används dig av inmatningsfält eller hitta en annan
 lösning som du kan använda dig av.
+
 Del 2:3
 • Varje dag finns det möjlighet att äta lunch på företaget. Skriv
 ett program som räknar ut vad de kostar för de anställda att
