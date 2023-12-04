@@ -1,0 +1,34 @@
+-Fråga 3
+Skapa ett program som skall fylla på en tågvagn. Det finns 10
+platser i vagnen. I vagnens främsta del finns det 2 stycken 1:
+klass platser, de har sittplatserna 1—2, I vagnens mitt, finns det
+ett bord med 4 tillhörande sittplatser. De har sittplatserna 4—8.
+Tåget går mellan Malmö och Stockholm. Arv skall användas,
+tänk igenom vilket sorts arv du skall använda.
+
+Del 3:1
+Fyll vagnen med passagerare. Varje passagerare kommer
+även att bli tilldelade ett sittplatser. Efternamn och
+platsnummer blir varje passagerares unika identifikation. Välj
+lämplig teknik för att skapa passagerarlistan. Gör detta utan
+inmatning.
+
+Del 3:2
+Fyll vagnen via inmatning. Användaren skall kunna välja om
+de vill sitta i 1: klass och/eller en plats vid ett bord. Är platsen
+upptagen av andra passagerare, skall det komma något sorts
+meddelande om att platsen är upptagen.
+
+Del 3:3
+Vi fortsätter på 3:2
+Användaren skall även kunna välja vilken destination de ska
+åka till. De ska kunna välja att åka till tur och retur resa Malmö
+— Nässjö. Malmö — Linköping eller Malmö — Stockholm Detta
+innebär att passagerarens plats som åker mellan Malmö-
+Nässjö, den platsen är fri att boka mellan Linköping —
+Stockholm.
+
+Bonus
+Del 3:4
+Alla passagerare skall vara sökbara, både i fråga om sittplats
+och efternamn.
