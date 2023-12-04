@@ -32,6 +32,7 @@ void setWord(String wordName);
 String English();
 String Italian();
 String Spanish();
+String Swedish();
 
 
 //Word one example .java (En fil för varje ord alternativt en fil med alla de olika orden i sig)
@@ -63,6 +64,13 @@ public class Kitten implements Translatable_Word {
     public String Spanish() {
         return "gatita";
     }
+
+    @Override
+    public String Swedish() {
+        return "Katta fan";
+    }
+
+
 
 //Main.java
 Någon sorts samling med alla orden så man lätt kan komma ut dem
