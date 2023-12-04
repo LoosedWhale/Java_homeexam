@@ -1,0 +1,78 @@
+Fråga 1
+  
+Listor
+Skapa en engelsk översättare med GUI
+  
+Del 1.1
+• Välj vilken teknik du skall använda dig av för att lagra
+dina ord. Lägg in 10 ord som användaren skall kunna
+översätta.
+  
+• Skapa översättaren. Användaren skall kunna skriv ett
+ord, ex katt, och få det översatt till cat.
+Del 1.2
+  
+• Användaren ska nu även kunna skriva in så att det går
+att översätta från engelska till svenska.
+Del 1.3
+  
+• Lägg till flera språk. Nu skall du låta användaren välja
+mellan engelska, spanska eller italienska.
+Bonusfråga: Ändra om färger på bakgrund, knappar och font.
+Lägg till bakgrundsbild.
+
+
+https://media.discordapp.net/attachments/1181159022494232618/1181159040131272714/image.png?ex=65800b14&is=656d9614&hm=edde446ed787d3134d1905e463c49c7abd1051948f535e8a89f710ac61950984&=&format=webp&quality=lossless 
+
+//WordCreator.java
+public interface Translatable_Word
+
+Attributes 
+void setWord(String wordName);
+String English();
+String Italian();
+String Spanish();
+
+
+//Word one example .java (En fil för varje ord alternativt en fil med alla de olika orden i sig)
+
+public class Kitten implements Translatable_Word {
+    String wordName;
+
+   Kitten(String wordName){
+        this.name = wordName;
+    }
+  
+    @Override
+    public void setWord(String wordName) {
+        this.name = wordName;
+    }
+
+  
+    @Override
+    public String English() {
+        return "kitten";
+    }
+
+    @Override
+    public String Italian() {
+        return "gattino";
+    }
+  
+    @Override
+    public String Spanish() {
+        return "gatita";
+    }
+
+//Main.java
+Någon sorts samling med alla orden så man lätt kan komma ut dem
+Funktion för att att ta in de skriva orden från text rutan 
+Formatera och skapa en ny lista med dessa ord för att kunna loppa igenom den 
+Funktion för att ta reda på om ordet finns i översättnings orden om ja översätt orden
+Om nej ge ett fel medelade eller en funktion för att lägga till ordet / orden i översöttningsbara ord listan 
+En funktion för att skapa nya instanser av Translatable_Word automatiskt (om detta är möjligt)
+  
+
+
+//Gui.java
+
