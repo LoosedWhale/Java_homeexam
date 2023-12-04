@@ -37,6 +37,7 @@ anställd köper lunch för.
 
 
 //WorkerCreater.java
+inherantance likt uppgift ett :) 
 Attributes 
 name
 salery 
