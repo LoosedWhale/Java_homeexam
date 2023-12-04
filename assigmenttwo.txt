@@ -33,3 +33,40 @@ kostar 125 kr.
 ätit och vilken av luncherna de åt.
 • Räkna ut för varje vecka, månad och år för varje enskild
 anställd köper lunch för.
+
+
+
+//WorkerCreater.java
+Attributes 
+name
+salery 
+lunch
+
+Workers.java
+Switch case 
+case 1: Worker.name == (special list of people that make the same amount of money aka Anna, Björn. Cecilia, David, Erik 50 000 kr / mo)
+case 2: Woker.name == (list of people that make 40 000 kr / mo  aka Filip and Greta)
+case 3: Worker.name == (list of people that split on the rest of the pay)
+
+
+//Main.java
+
+ask user for totalt salery via gui
+button for adding workers (there should be a way to create the defualt workers)
+during the add workers ask for salery and what kind of lucnh they want
+
+button to calculate how much the workers will make next year via raise of 5% 
+
+
+
+calcutalte salery class for that yes :P
+add a function for raise 
+
+
+calculate lunch 
+
+//Gui.java
+
+make it look nice lol
+
+https://web.mit.edu/6.005/www/sp14/psets/ps4/java-6-tutorial/components.html 
