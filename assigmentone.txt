@@ -73,12 +73,11 @@ public class Kitten implements Translatable_Word {
 
 
 //Main.java
-Någon sorts samling med alla orden så man lätt kan komma ut dem
 Funktion för att att ta in de skriva orden från text rutan 
 Formatera och skapa en ny lista med dessa ord för att kunna loppa igenom den 
 Funktion för att ta reda på om ordet finns i översättnings orden om ja översätt orden
 Om nej ge ett fel medelade eller en funktion för att lägga till ordet / orden i översöttningsbara ord listan 
-En funktion för att skapa nya instanser av Translatable_Word automatiskt (om detta är möjligt)
+
   
 
 
