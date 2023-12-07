@@ -14,10 +14,10 @@ public class Translator {
 	public static void main(String[] args) {
 		
 		
-		// Initialize the list to store words
+	// Initialize the list to store words
         List<Map<String, String>> wordList = new ArrayList<>();
 
-        // Populate the list with 10 words and their translations
+	// List of words 
         addWord(wordList, "Hello", "Hola", "Ciao", "Hej");
         addWord(wordList, "Goodbye", "Adiós", "Arrivederci", "Adjö");
         addWord(wordList, "Thank you", "Gracias", "Grazie", "Tack");
@@ -28,10 +28,9 @@ public class Translator {
     	addWord(wordList, "House", "Casa", "Casa", "Hus");
     	addWord(wordList, "Car", "Coche", "Auto", "Bil");
     	addWord(wordList, "Computer", "Computadora", "Computer", "Dator");
-        // Add more words as needed..
-		
-		
-		
+
+
+
 		
 		
 		System.out.println(""
