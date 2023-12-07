@@ -21,13 +21,13 @@ public class Translator {
         addWord(wordList, "Hello", "Hola", "Ciao", "Hej");
         addWord(wordList, "Goodbye", "Adiós", "Arrivederci", "Adjö");
         addWord(wordList, "Thank you", "Gracias", "Grazie", "Tack");
-    		addWord(wordList, "Yes", "Sí", "Sì", "Ja");
-    		addWord(wordList, "No", "No", "No", "Nej");
-    		addWord(wordList, "Cat", "Gato", "Gatto", "Katt");
-    		addWord(wordList, "Dog", "Perro", "Cane", "Hund");
-    		addWord(wordList, "House", "Casa", "Casa", "Hus");
-    		addWord(wordList, "Car", "Coche", "Auto", "Bil");
-    		addWord(wordList, "Computer", "Computadora", "Computer", "Dator");
+    	addWord(wordList, "Yes", "Sí", "Sì", "Ja");
+    	addWord(wordList, "No", "No", "No", "Nej");
+    	addWord(wordList, "Cat", "Gato", "Gatto", "Katt");
+    	addWord(wordList, "Dog", "Perro", "Cane", "Hund");
+    	addWord(wordList, "House", "Casa", "Casa", "Hus");
+    	addWord(wordList, "Car", "Coche", "Auto", "Bil");
+    	addWord(wordList, "Computer", "Computadora", "Computer", "Dator");
         // Add more words as needed..
 		
 		
