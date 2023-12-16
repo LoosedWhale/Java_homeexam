@@ -14,15 +14,22 @@ public class Employee {
         this.luxuryLunchDays = luxuryLunchDays;
     }
 
-	public void displayResults() {
+    public void displayResults() {
         System.out.println("Employee Results:");
         System.out.println("Name: " + name);
         System.out.println("Yearly Salary: " + (monthlySalary * 12));
         System.out.println("Next Year's Salary: " + (monthlySalary * 12 * 1.05));
-        System.out.println("Default Lunch Days: " + defaultLunchDays);
-        System.out.println("Luxury Lunch Days: " + luxuryLunchDays);
-        System.out.println("Chosen Lunch: " + (luxuryLunchDays > defaultLunchDays ? "Luxury Lunch" : "Default Lunch"));
-        System.out.println("Lunch Cost: " + calculateLunchCost());
+        
+        // Display Chosen Lunch only if at least one lunch is chosen
+        if (luxuryLunchDays > 0 || defaultLunchDays > 0) {
+        	System.out.println("Chosen Lunch: " +
+        	        (luxuryLunchDays > 0 ? luxuryLunchDays + " Luxury Lunch" : "") +
+        	        (defaultLunchDays > 0 ? (luxuryLunchDays > 0 ? ", " : "") + defaultLunchDays + " Default Lunch" : ""));
+            System.out.println("Lunch Cost: " + calculateLunchCost());
+        } else {
+            System.out.println("No Lunch Chosen");
+        }
+
         System.out.println("---------------------------");
     }
 
