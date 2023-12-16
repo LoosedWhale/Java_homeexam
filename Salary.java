@@ -18,6 +18,7 @@ public class Salary extends EmployeePanel {
     }
 
     public static void main(String[] args) {
+    	// Create the main frame
         frame = new JFrame();
         frame.getContentPane().setBackground(new Color(0, 100, 255));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -65,7 +66,9 @@ public class Salary extends EmployeePanel {
     }
 
     private static void createEmployeePanelInstance() {
-        EmployeePanel employeePanel = new EmployeePanel(employeePanels);
+    	// Create a new instance of EmployeePanel
+    	EmployeePanel employeePanel = new EmployeePanel(new ArrayList<>(employeePanels));
+
         int yPos = employeePanels.size() * (25 + 2);
         employeePanel.setBounds(10, yPos + 80, 890, 25);
         employeePanels.add(employeePanel);
@@ -77,54 +80,56 @@ public class Salary extends EmployeePanel {
     }
 
     private static void calculateResults() {
-        // Separate employees with an inputted salary from those without
+    	// Separate employees with an inputed salary from those without
         List<Employee> employeesWithSalary = new ArrayList<>();
         List<Employee> employeesWithoutSalary = new ArrayList<>();
 
         for (EmployeePanel employeePanel : employeePanels) {
-            Employee employ = employeePanel.saveAndCalculateEmployee(totalSalary);
+            Employee employee = employeePanel.saveAndCalculateEmployee(totalSalary);
 
-            if (employ.getMonthlySalary() > 0) {
-                // Employee with an inputted salary
-                employeesWithSalary.add(employ);
+            if (employee.getMonthlySalary() > 0) {
+                // Employee with an inputed salary
+                employeesWithSalary.add(employee);
             } else {
-                // Employee without an inputted salary
-                employeesWithoutSalary.add(employ);
+                // Employee without an inputed salary
+                employeesWithoutSalary.add(employee);
             }
         }
 
-        // Calculate the total remaining salary for employees with an inputted salary
+        // Calculate the total remaining salary for employees with an inputed salary
         double totalSalaryForEmployeesWithSalary = getTotalSalaryForEmployeesWithSalary(employeesWithSalary);
 
-        // Calculate the total remaining salary for employees without an inputted salary
+        // Calculate the total remaining salary for employees without an inputed salary
         double totalSalaryForRemaining = totalSalary - totalSalaryForEmployeesWithSalary;
 
-        // Split the remaining total salary among employees without an inputted salary
+        // Split the remaining total salary among employees without an inputed salary
         if (!employeesWithoutSalary.isEmpty()) {
             double salaryPerEmployee = totalSalaryForRemaining / employeesWithoutSalary.size();
-            for (Employee employ : employeesWithoutSalary) {
-                employ.setYearlySalary(salaryPerEmployee);
+            for (Employee employee : employeesWithoutSalary) {
+                employee.setYearlySalary(salaryPerEmployee);
             }
         }
 
-        // Display results for employees with an inputted salary
-        for (Employee employ : employeesWithSalary) {
-            employ.displayResults();
+        // Display results for employees with an inputed salary
+        for (Employee employee : employeesWithSalary) {
+            employee.displayResults();
         }
 
-        // Display results for employees without an inputted salary
-        for (Employee employ : employeesWithoutSalary) {
-            employ.displayResults();
+        // Display results for employees without an inputed salary
+        for (Employee employee : employeesWithoutSalary) {
+            employee.displayResults();
         }
     }
 
 
-    // Helper method to calculate the total salary for employees with an inputted salary
+    // Helper method to calculate the total salary for employees with an inputed salary
     private static double getTotalSalaryForEmployeesWithSalary(List<Employee> employeesWithSalary) {
         double totalSalaryForEmployeesWithSalary = 0;
         for (Employee employ : employeesWithSalary) {
             totalSalaryForEmployeesWithSalary += employ.getYearlySalary();
         }
+        System.out.println("Degug " + totalSalaryForEmployeesWithSalary + " \n"
+        		+ "---------------------------");
         return totalSalaryForEmployeesWithSalary;
     }
 }
