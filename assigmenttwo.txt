@@ -70,4 +70,33 @@ calculate lunch
 
 make it look nice lol
 
+
+
+
+Updaterad Sudo code 
+//A box that is 800 wide and 20 pixels high it should also be placed under each other 
+	//The box should be able to save the inputs the user makes
+	//In the box there is A label for Name: and an input field
+	//A label for Salary: and an input field, note that the inputed salary is what the employ makes a month 
+	//A label for Lunch days: Input field for Default Lunch and an Input field for Luxury Lunch 
+	//The input for the different lunches should be in an integer set in days 
+	//The box should be modular so it can be created after each other via a Create Employ button located in the Salary.java
+	
+	
+	//There should be a Calculate button in the Salary.java that removes all the boxes that where created above 
+	//But for that to happen at least one employ most have filled in there information and a total yearly salary most have been inputed
+	//The total salary is an input filled in Salaray.java
+	//The information should still be saved so it can be used to calculate the following 
+	//The total salary of all employs (there needs to be a way to save that info) 
+	//For some employs when they have inputed the salary they do so with out an integer if that is the case it should calculate the left over salary 
+	//With other words they split the rest of the total salary among each other (for those whom input something else then an integer)
+	//Then it should output which lunch they choice and how much it was 
+	
+	//All of this should be placed as new information boxes 800 wide and 20 pixels high, like the other boxes these should be placed under each other
+	//These should include The inputed name
+	//How much they would make in a year so the monthly salary times 12 
+	//How much they would make in the next year so the newly created yearly salary times 1.05%
+	//Then it should output which lunch they choice and how much it was 
+
+
 https://web.mit.edu/6.005/www/sp14/psets/ps4/java-6-tutorial/components.html 
