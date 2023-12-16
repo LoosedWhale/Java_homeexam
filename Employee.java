@@ -6,7 +6,7 @@ public class Employee {
     private int defaultLunchDays;
     private int luxuryLunchDays;
     
- // Update the constructor
+    // Constructor to initialize Employee object with provided values
     public Employee(String name, double salary, int defaultLunchDays, int luxuryLunchDays) {
         this.name = name;
         this.monthlySalary = salary;
@@ -14,6 +14,8 @@ public class Employee {
         this.luxuryLunchDays = luxuryLunchDays;
     }
 
+    
+    // Method to display employee results
     public void displayResults() {
         System.out.println("Employee Results:");
         System.out.println("Name: " + name);
@@ -33,24 +35,25 @@ public class Employee {
         System.out.println("---------------------------");
     }
 
+    // Method to calculate lunch cost based on predefined costs
 	private double calculateLunchCost() {
-	    // Example: You can have a predefined cost for each lunch day
 	    double defaultLunchCost = 75.0;
 	    double luxuryLunchCost = 125.0;
 
 	    return defaultLunchDays * defaultLunchCost + luxuryLunchDays * luxuryLunchCost;
 	}
 	
-	
+	 // Getter method to retrieve the monthly salary
 	 public double getMonthlySalary() {
 	        return monthlySalary;
 	    }
 	 
+	 // Setter method to set the yearly salary
 	 public double getYearlySalary() {
 		    return monthlySalary * 12;
 		}
 
-	 
+	 // Getter method to retrieve the employee's name
 	 public void setYearlySalary(double yearlySalary) {
 		    this.monthlySalary = yearlySalary / 12;
 		}
@@ -63,3 +66,4 @@ public class Employee {
 	
 	
 }
+
