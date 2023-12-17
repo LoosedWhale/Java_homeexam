@@ -2,11 +2,13 @@ package Salary;
 
 import javax.swing.*;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class Salary extends EmployeePanel {
 
     private static List<EmployeePanel> employeePanels = new ArrayList<>();
@@ -43,7 +45,8 @@ public class Salary extends EmployeePanel {
         JTextField totalSalaryField = new JTextField();
         totalSalaryField.setBounds(300 + 100, employeePanels.size() * (25 + 2), 150, 20);
         frame.add(totalSalaryField);
-
+        
+        // Create calcualteButton to display the results in both the console and GUI based
         JButton calculateButton = new JButton("Calculate");
         calculateButton.setBounds(10, 40 + employeePanels.size() * (25 + 2), 150, 25);
         calculateButton.addActionListener(new ActionListener() {
@@ -56,15 +59,34 @@ public class Salary extends EmployeePanel {
                     totalSalary = 0.0;
                 }
 
+                // Function for calculating the results 
                 calculateResults();
             }
         });
         frame.add(calculateButton);
 
-        frame.setSize(925, 500);
+        frame.setSize(925, 800);
         frame.setVisible(true);
     }
+    
+    
+    
+    private static void displayResultsPanels(List<Employee> employees) {
+    	
+    	// Adjust the starting y position for result panels so that there is a gap between that and the EmployeePanles
+        int yPos = employeePanels.size() * (25 + 2) + 120; 
 
+        ResultPanel resultPanel = new ResultPanel(employees);
+        // Adjust the size and position as needed
+        resultPanel.setBounds(10, yPos, 890, 25 * employees.size()); 
+        frame.add(resultPanel);
+
+        frame.revalidate();
+        frame.repaint();
+    }
+
+
+    // Method for adding multiple instances of the EmployeePanel
     private static void createEmployeePanelInstance() {
     	// Create a new instance of EmployeePanel
     	EmployeePanel employeePanel = new EmployeePanel(new ArrayList<>(employeePanels));
@@ -74,13 +96,18 @@ public class Salary extends EmployeePanel {
         employeePanels.add(employeePanel);
         frame.add(employeePanel);
 
-        // Enable the "Calculate" button when at least one instance is created
         frame.revalidate();
         frame.repaint();
     }
-
+    
+    
+    // Method for calculating the Salary and Lunch results
     private static void calculateResults() {
-    	// Separate employees with an inputed salary from those without
+    	
+    	// Clear the existing result panels
+        clearResultPanels();
+    	
+        // Separate employees with an inputed salary from those without
         List<Employee> employeesWithSalary = new ArrayList<>();
         List<Employee> employeesWithoutSalary = new ArrayList<>();
 
@@ -96,6 +123,11 @@ public class Salary extends EmployeePanel {
             }
         }
 
+        // Combine both lists into a single list
+        List<Employee> allEmployees = new ArrayList<>();
+        allEmployees.addAll(employeesWithSalary);
+        allEmployees.addAll(employeesWithoutSalary);
+
         // Calculate the total remaining salary for employees with an inputed salary
         double totalSalaryForEmployeesWithSalary = getTotalSalaryForEmployeesWithSalary(employeesWithSalary);
 
@@ -110,16 +142,29 @@ public class Salary extends EmployeePanel {
             }
         }
 
-        // Display results for employees with an inputed salary
-        for (Employee employee : employeesWithSalary) {
+        // Display results for all employees console based
+        for (Employee employee : allEmployees) {
             employee.displayResults();
         }
 
-        // Display results for employees without an inputed salary
-        for (Employee employee : employeesWithoutSalary) {
-            employee.displayResults();
-        }
+        // Display a single result panel for all employees GUI based
+        displayResultsPanels(allEmployees);
+        
     }
+        
+        // A method for clearing the results panel so that the user can make change and get the updated 
+        private static void clearResultPanels() {
+            // Remove existing result panels from the frame
+            for (Component component : frame.getContentPane().getComponents()) {
+                if (component instanceof ResultPanel) {
+                    frame.getContentPane().remove(component);
+                }
+            }
+            
+            frame.revalidate();
+            frame.repaint();
+    }
+
 
 
     // Helper method to calculate the total salary for employees with an inputed salary
@@ -128,8 +173,6 @@ public class Salary extends EmployeePanel {
         for (Employee employ : employeesWithSalary) {
             totalSalaryForEmployeesWithSalary += employ.getYearlySalary();
         }
-        System.out.println("Degug " + totalSalaryForEmployeesWithSalary + " \n"
-        		+ "---------------------------");
         return totalSalaryForEmployeesWithSalary;
     }
 }
