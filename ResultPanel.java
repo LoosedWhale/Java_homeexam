@@ -42,7 +42,8 @@ public class ResultPanel extends JPanel {
             lunchLabel.setBounds(x + 2 * labelWidth + textFieldWidth + textFieldWidth + textFieldWidth+ textFieldWidth, yPos, labelWidth + textFieldWidth + textFieldWidth + textFieldWidth + textFieldWidth+ textFieldWidth + textFieldWidth, defaultHeight);
             add(lunchLabel);
 
-            yPos += 25; // Adjust the vertical gap between result panels
+            // Adjust the vertical gap between result panels
+            yPos += 25;
         }
     }
 }
