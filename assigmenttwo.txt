@@ -106,3 +106,5 @@ Updaterad Sudo code
 
 
 https://web.mit.edu/6.005/www/sp14/psets/ps4/java-6-tutorial/components.html 
+
+https://media.discordapp.net/attachments/1079831077939576862/1185523694236352522/Design.png?ex=658febfa&is=657d76fa&hm=8ef797e7db93b675a6cbdd4d2a12d80ae21af6bc2502698df115661b2bd0bcda&=&format=webp&quality=lossless&width=537&height=503
