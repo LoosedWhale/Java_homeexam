@@ -1,9 +1,9 @@
 package Salary;
 import javax.swing.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class EmployeePanel extends JPanel {
 	
 	    private JTextField nameField;
@@ -40,7 +40,7 @@ public class EmployeePanel extends JPanel {
 	        nameField.setBounds(x + 50, y, textFieldWidth, defaultHeigth);
 	        add(nameField);
 	        
-	        // Label and text field for "Salary /month"
+	        // Label and text field for "Salary /month" 
 	        JLabel salaryLabel = new JLabel("Salary /mo:");
 	        salaryLabel.setBounds(x + labelWidth + textFieldWidth, y, labelWidth, defaultHeigth);
 	        add(salaryLabel);
@@ -58,7 +58,7 @@ public class EmployeePanel extends JPanel {
 	        defaultLunchField.setBounds(x + 3 * (labelWidth + textFieldWidth) - 30, y, textFieldWidth, defaultHeigth);
 	        add(defaultLunchField);
 	        
-	        // Label and text field for "Default Lunch"
+	        // Label and text field for "Luxury Lunch"
 	        JLabel luxuryLunchLabel = new JLabel("Luxury Lunch:");
 	        luxuryLunchLabel.setBounds(x + 4 * (labelWidth + textFieldWidth) - 50, y, labelWidth, defaultHeigth);
 	        add(luxuryLunchLabel);
@@ -67,11 +67,8 @@ public class EmployeePanel extends JPanel {
 	        luxuryLunchField.setBounds(x + 4 * (labelWidth + textFieldWidth) + 50, y, textFieldWidth, defaultHeigth);
 	        add(luxuryLunchField);
 	        
-	        
-	        
-	        
 	    }
-		
+	    
 	    
 	    // Method to save employee information and calculate salary
 	    public Employee saveAndCalculateEmployee(double totalSalary) {
@@ -139,4 +136,3 @@ public class EmployeePanel extends JPanel {
 
 	
 }
-
