@@ -15,7 +15,7 @@ public class Employee {
     }
 
     
-    // Method to display employee results
+    // Method to display employee results in console
     public void displayResults() {
         System.out.println("Employee Results:");
         System.out.println("Name: " + name);
@@ -35,35 +35,64 @@ public class Employee {
         System.out.println("---------------------------");
     }
 
-    // Method to calculate lunch cost based on predefined costs
-	private double calculateLunchCost() {
-	    double defaultLunchCost = 75.0;
-	    double luxuryLunchCost = 125.0;
+ 
+    // Calculate Lunch cost originally used in both the GUI and Console currently only used in the console
+    public double calculateLunchCost() {
+        double defaultLunchCost = 75.0;
+        double luxuryLunchCost = 125.0;
 
-	    return defaultLunchDays * defaultLunchCost + luxuryLunchDays * luxuryLunchCost;
-	}
-	
-	 // Getter method to retrieve the monthly salary
-	 public double getMonthlySalary() {
-	        return monthlySalary;
-	    }
-	 
-	 // Setter method to set the yearly salary
-	 public double getYearlySalary() {
-		    return monthlySalary * 12;
-		}
+        return defaultLunchDays * defaultLunchCost + luxuryLunchDays * luxuryLunchCost;
+    }
+    
+    
+    // Method that returns the calculated lunch cost and the amount of days that lunch was choose (might have to be updated to display how much that would be per week / month and year)
+    public String calculateLunchCostAndDays() {
+        StringBuilder lunchInfo = new StringBuilder();
 
-	 // Getter method to retrieve the employee's name
-	 public void setYearlySalary(double yearlySalary) {
-		    this.monthlySalary = yearlySalary / 12;
-		}
+        // Display Chosen Lunch only if at least one lunch is chosen
+        if (luxuryLunchDays > 0 || defaultLunchDays > 0) {
+            lunchInfo.append(" ")
+                    .append(luxuryLunchDays > 0 ? luxuryLunchDays + " Luxury " : "")
+                    .append(defaultLunchDays > 0 ? (luxuryLunchDays > 0 ? ", " : "") + defaultLunchDays + " Default " : "");
+            lunchInfo.append("\nCost: ").append(calculateLunchCost());
+        } else {
+            lunchInfo.append("No Lunch Chosen");
+        }
 
-	public String getName() {
-		return name;
-	}
+        return lunchInfo.toString();
+    }
 
+    // Gets the monthly salary of an employee
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
 
-	
-	
+    
+    // Gets the yearly salary of an employee 
+    public double getYearlySalary() {
+        return monthlySalary * 12;
+    }
+
+    
+    // Method to get the number of default lunch days
+    public int getDefaultLunchDays() {
+        return defaultLunchDays;
+    }
+
+    // Method to get the number of luxury lunch days
+    public int getLuxuryLunchDays() {
+        return luxuryLunchDays;
+    }
+    
+    // Sets the yearly salary for those employees without a valid inputed salary
+    public void setYearlySalary(double yearlySalary) {
+        this.monthlySalary = yearlySalary / 12;
+    }
+
+    // Method to get the employees name
+    public String getName() {
+        return name;
+    }
+    
+ 
 }
-
