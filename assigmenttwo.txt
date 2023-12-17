@@ -34,7 +34,13 @@ kostar 125 kr.
 • Räkna ut för varje vecka, månad och år för varje enskild
 anställd köper lunch för.
 
-
+3 300 000
+960 000
+4 260 000
+1 740 000
+580 000
+48 333
+471 540
 
 //WorkerCreater.java
 inherantance likt uppgift ett :) 
