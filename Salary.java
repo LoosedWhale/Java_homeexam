@@ -21,7 +21,7 @@ public class Salary extends EmployeePanel {
 
     public static void main(String[] args) {
     	// Create the main frame
-        frame = new JFrame();
+        frame = new JFrame("INSANE SALARY CALCUALATIONG PROGRAM");
         frame.getContentPane().setBackground(new Color(0, 100, 255));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
@@ -59,7 +59,7 @@ public class Salary extends EmployeePanel {
                     totalSalary = 0.0;
                 }
 
-                // Function for calculating the results 
+          
                 calculateResults();
             }
         });
@@ -70,14 +70,14 @@ public class Salary extends EmployeePanel {
     }
     
     
-    
+    // Method to display the result by calling on the class ResultsPanel
     private static void displayResultsPanels(List<Employee> employees) {
     	
     	// Adjust the starting y position for result panels so that there is a gap between that and the EmployeePanles
         int yPos = employeePanels.size() * (25 + 2) + 120; 
-
+        // Create a new instance of ResultPanel
         ResultPanel resultPanel = new ResultPanel(employees);
-        // Adjust the size and position as needed
+        
         resultPanel.setBounds(10, yPos, 890, 25 * employees.size()); 
         frame.add(resultPanel);
 
@@ -154,7 +154,6 @@ public class Salary extends EmployeePanel {
         
         // A method for clearing the results panel so that the user can make change and get the updated 
         private static void clearResultPanels() {
-            // Remove existing result panels from the frame
             for (Component component : frame.getContentPane().getComponents()) {
                 if (component instanceof ResultPanel) {
                     frame.getContentPane().remove(component);
