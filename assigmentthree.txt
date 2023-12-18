@@ -45,9 +45,33 @@ Där:
 Kommer återanvända koden från min flygplans uppgift till en början enbart göra det console baserat för att det är lättare så (tror jag i dags lägger iallafall)
 den koden är lägst ner
 
-En metod för att skapa passagerare 
+En metod för att skapa passagerare (gjorde inte så)
 HashMap<String, String> seats= new HashMap<>();
 https://www.w3schools.com/java/java_hashmap.asp
+
+Från till funtion 
+Där man ska kunna välja mellan att åka från
+
+Malmö
+Nässjö 
+Linköping 
+Stockholm 
+
+Sedan kommer det andra alternativet att välja vart man ska 
+Så boroende på vad man skrev innan ska man välja varat man ska. 
+
+Man kan allstå inte välja samma.
+
+Vad mer ska funktion  / class för att kunna göra ju den ska kunna kolla vem som ska åka, även vilken plats personen vill ha
+där kollar programmet om platen är tillgänglig eller inte, för plasterna 3,9,10 kan man inte sitta där för de är "Broken". 
+Men för resten kan man sitta där om ingen annan sitter där.
+Man ska kunna få en förbestämed lista med folk som ska resa men även valet att sätta ut personer själv.
+
+
+En annan funktion för att kolla om persnoner sitter på plasten både genom sittplats
+och efternamn. 
+Den här funktion kan utnytjas för utplaceringen då man kan kolla om folk redan sitter där eller inte.
+
 
 
 
