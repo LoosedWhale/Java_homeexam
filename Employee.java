@@ -45,7 +45,7 @@ public class Employee {
     }
     
     
-    // Method that returns the calculated lunch cost and the amount of days that lunch was choose (might have to be updated to display how much that would be per week / month and year)
+    // Method that returns the calculated lunch cost and the amount of days that lunch was choose
     public String calculateLunchCostAndDays() {
         StringBuilder lunchInfo = new StringBuilder();
 
