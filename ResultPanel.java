@@ -23,7 +23,7 @@ public class ResultPanel extends JPanel {
         int yPos = y;
         for (Employee employee : employees) {
             // Label and text field for "Name"
-            JLabel nameLabel = new JLabel("Name:" + employee.getName());
+            JLabel nameLabel = new JLabel("Name: " + employee.getName());
             nameLabel.setBounds(x, yPos, 40 + labelWidth, 20);
             add(nameLabel);
 
@@ -40,10 +40,30 @@ public class ResultPanel extends JPanel {
             // Label and text field for "lunchLabel "
             JLabel lunchLabel = new JLabel("Lunch: " + employee.calculateLunchCostAndDays());
             lunchLabel.setBounds(x + 2 * labelWidth + textFieldWidth + textFieldWidth + textFieldWidth+ textFieldWidth, yPos, labelWidth + textFieldWidth + textFieldWidth + textFieldWidth + textFieldWidth+ textFieldWidth + textFieldWidth, defaultHeight);
+    
+            
+            // Set tool tip text for the lunch label
+            lunchLabel.setToolTipText(getLunchToolTipText(employee));
             add(lunchLabel);
 
-            // Adjust the vertical gap between result panels
-            yPos += 25;
+            yPos += lunchLabel.getHeight() + 5;
         }
+    }
+    
+    // Helper method to generate tool tip text for the lunch label
+    private String getLunchToolTipText(Employee employee) {
+        StringBuilder toolTipText = new StringBuilder("Lunch Details:\n");
+
+        int totalLunchDays = employee.getDefaultLunchDays() + employee.getLuxuryLunchDays();
+        int weeks = totalLunchDays / 7;
+        int months = totalLunchDays / 30;
+        int years = totalLunchDays / 365;
+
+        toolTipText.append("Weeks: ").append(weeks).append("\n ");
+        toolTipText.append("Months: ").append(months).append("\n ");
+        toolTipText.append("Years: ").append(years);
+
+        System.out.println(toolTipText);
+        return toolTipText.toString();
     }
 }
