@@ -1,6 +1,8 @@
 package Trainwagon;
 
 public class Seat {
+	
+	// All the components a seat needs 🤓
 	private String seatNumber;
     private String occupant;
 
