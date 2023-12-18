@@ -27,7 +27,7 @@ public class Translator {
 		print_txt.setEditable(false);
 		
 		Label print_txtLabel = new Label("Translated word");
-		print_txtLabel.setBounds(175,60,150,20); 
+		print_txtLabel.setBounds(200,60,150,20); 
 		print_txtLabel.setFont(new Font("Arial", Font.PLAIN, 12));
 
 		
